@@ -1,27 +1,47 @@
-# Angular10App
+#Getting started with Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
+## Prerequisites
 
-## Development server
+Install [Node.js](https://nodejs.org/en/download/)
+Install angular cli `npm run install -g @angular/cli`
+Create project `ng new angular10-app`. This project was generated without routing and with SASS.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Thinks to know
 
-## Code scaffolding
+- You get basic commads from [default README file](docs/README.md)
+- Typescript is installed by default.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Things to do
 
-## Build
+### Setup prettier
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+1. install prettier `npm install --save-dev prettier tslint-config-prettier`
+2. added to tslint.json
 
-## Running unit tests
+```
+{
+  "extends": [
+      "tslint:recommended",
+      "tslint-config-prettier"
+  ],
+  ...
+}
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3. Configure prettier example [.prettierrc.json](.prettierrc.json)
+4. Add pre-commit hook to re-format files that are marked as “staged” via git add before you commit.
 
-## Running end-to-end tests
+- Install Husky `npm install --save-dev pretty-quick husky``
+- Add to package.json
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
+{
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
+```
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+RECOMENDATION: On VSCode check setting "Format on Save". Set Prettier as default.
