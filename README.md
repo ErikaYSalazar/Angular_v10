@@ -1,15 +1,17 @@
-#Getting started with Angular
+# Getting started with Angular
 
 ## Prerequisites
 
-Install [Node.js](https://nodejs.org/en/download/)
-Install angular cli `npm run install -g @angular/cli`
-Create project `ng new angular10-app`. This project was generated without routing and with SASS.
+- Install [Node.js](https://nodejs.org/en/download/)
+- Install angular cli `npm run install -g @angular/cli`
+- Create project `ng new angular10-app` (This project was generated without routing and with SASS)
 
 ## Thinks to know
 
 - You get basic commads from [default README file](docs/README.md)
-- Typescript is installed by default.
+- Typescript is a primary language for Angular application development.
+  - tsconfig.json is TypeScript compiler configuration.
+  - TypeScript declaration files name should end '.d.ts'
 
 ## Things to do
 
